@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Request a quote for Phoenix Libations mobile bartending services."
+    >
+
+    <title>Book Us | Phoenix Libations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">
+                Phoenix Libations
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a
+                        href="contact.html"
+                        class="nav-button active"
+                        aria-current="page"
+                    >
+                        Book Us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero contact-hero">
+            <div class="page-hero-content">
+                <p class="section-label">
+                    Book Phoenix Libations
+                </p>
+
+                <h1>Tell Us About Your Event</h1>
+
+                <p>
+                    Share your celebration details, and we’ll help
+                    you plan a memorable bar experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-page section">
+            <div class="contact-layout">
+                <div class="contact-copy">
+                    <p class="section-label">
+                        Request a Quote
+                    </p>
+
+                    <h2>Let’s Raise the Bar</h2>
+
+                    <p>
+                        Include your event date, location,
+                        estimated guest count, and the type of
+                        service you need.
+                    </p>
+
+                    <div class="contact-details">
+                        <h3>Email</h3>
+
+                        <a href="mailto:Dvl@phoenixlibations.com">
+                            Dvl@phoenixlibations.com
+                        </a>
+                    </div>
+                </div>
+
+                <form
+                    class="contact-form"
+                    action="https://formsubmit.co/Dvl@phoenixlibations.com"
+                    method="POST"
+                >
+                    <!-- Subject line for the email Phoenix Libations receives -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Phoenix Libations Booking Request"
+                    >
+
+                    <!-- Displays the booking information in a table -->
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+                    <!-- Automatic confirmation sent to the customer -->
+                    <input
+                        type="hidden"
+                        name="_autoresponse"
+                        value="Thank you for contacting Phoenix Libations! We have received your booking request. Our team will review your information and respond within 5–7 business days. You do not need to reply to this automated confirmation. We look forward to helping make your event unforgettable. — Phoenix Libations"
+                    >
+
+                    <!-- Spam protection -->
+                    <input
+                        type="text"
+                        name="_honey"
+                        class="form-honeypot"
+                        tabindex="-1"
+                        autocomplete="off"
+                        aria-hidden="true"
+                    >
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        id="name"
+                        name="Name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                        id="phone"
+                        name="Phone"
+                        type="tel"
+                        autocomplete="tel"
+                        inputmode="tel"
+                    >
+
+                    <label for="date">
+                        Event Date
+                    </label>
+
+                    <input
+                        id="date"
+                        name="Event Date"
+                        type="date"
+                        required
+                    >
+
+                    <label for="guests">
+                        Estimated Guest Count
+                    </label>
+
+                    <input
+                        id="guests"
+                        name="Guest Count"
+                        type="number"
+                        min="1"
+                        inputmode="numeric"
+                        required
+                    >
+
+                    <label for="message">
+                        Event Details
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="Event Details"
+                        rows="6"
+                        placeholder="Please include the event type, location, requested services, drink preferences, and any special requests."
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Request a Quote
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Phoenix Libations</h2>
+
+                <p>
+                    Premium mobile bartending for unforgettable
+                    celebrations.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Book Us</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+
+                <a href="mailto:Dvl@phoenixlibations.com">
+                    Dvl@phoenixlibations.com
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Phoenix Libations.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
