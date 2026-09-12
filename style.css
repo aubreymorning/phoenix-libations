@@ -1,0 +1,1019 @@
+/* ======================================
+   GOOGLE FONT
+====================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+/* ======================================
+   COLOR VARIABLES
+====================================== */
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --dark-gray: #191919;
+    --card: #202020;
+    --gold: #d9aa3a;
+    --light-gold: #f3cf70;
+    --orange: #dd6b20;
+    --cream: #fff8e8;
+    --white: #ffffff;
+    --light-gray: #d6d6d6;
+    --border: rgba(217, 170, 58, 0.35);
+}
+
+
+/* ======================================
+   RESET
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ======================================
+   GENERAL TYPOGRAPHY
+====================================== */
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    color: var(--light-gray);
+}
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    width: min(760px, 100%);
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 20px;
+}
+
+.section-heading p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+.section-label,
+.hero-label {
+    margin-bottom: 12px;
+    color: var(--gold);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ======================================
+   HEADER AND NAVIGATION
+====================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 7%;
+    background-color: rgba(8, 8, 8, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--white);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:not(.nav-button)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    left: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-button {
+    padding: 12px 22px;
+    color: var(--black) !important;
+    background-color: var(--gold);
+    border-radius: 999px;
+}
+
+.nav-button:hover {
+    background-color: var(--light-gold);
+}
+
+
+/* ======================================
+   HERO SECTION
+====================================== */
+
+.hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.91) 0%,
+            rgba(0, 0, 0, 0.7) 45%,
+            rgba(0, 0, 0, 0.28) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    padding: 110px 7%;
+}
+
+.hero-content > * {
+    max-width: 720px;
+}
+
+.hero-content h1 {
+    margin-bottom: 22px;
+    color: var(--white);
+    font-size: clamp(3.4rem, 8vw, 6.8rem);
+}
+
+.hero-description {
+    margin-bottom: 34px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    padding: 15px 27px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    color: var(--black);
+    background-color: var(--gold);
+}
+
+.btn-primary:hover {
+    background-color: var(--light-gold);
+}
+
+.btn-secondary {
+    color: var(--white);
+    background-color: transparent;
+    border-color: var(--white);
+}
+
+.btn-secondary:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.btn-dark {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.btn-dark:hover {
+    color: var(--black);
+    background-color: var(--gold);
+}
+
+.btn-light {
+    color: var(--black);
+    background-color: var(--cream);
+}
+
+.btn-light:hover {
+    background-color: var(--gold);
+}
+
+
+/* ======================================
+   INTRODUCTION SECTION
+====================================== */
+
+.intro {
+    background-color: var(--cream);
+    color: var(--black);
+}
+
+.intro h2 {
+    color: var(--black);
+}
+
+.intro p {
+    color: #444444;
+}
+
+
+/* ======================================
+   SERVICES SECTION
+====================================== */
+
+.services {
+    background-color: var(--dark);
+}
+
+.service-grid {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    min-height: 310px;
+    padding: 34px 28px;
+    background-color: var(--card);
+    border: 1px solid transparent;
+    border-radius: 18px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background-color: #252525;
+    border-color: var(--gold);
+}
+
+.service-number {
+    display: block;
+    margin-bottom: 45px;
+    color: var(--gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.service-card h3 {
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+.service-card p {
+    font-size: 0.94rem;
+}
+
+
+/* ======================================
+   WHY CHOOSE US SECTION
+====================================== */
+
+.why-us {
+    background-color: var(--black);
+}
+
+.why-us-content {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.why-us-text h2 {
+    margin-bottom: 24px;
+}
+
+.why-us-text > p:not(.section-label) {
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+}
+
+.text-link:hover {
+    color: var(--light-gold);
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.benefit {
+    padding: 27px;
+    background-color: var(--dark-gray);
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+}
+
+.benefit h3 {
+    margin-bottom: 10px;
+    font-size: 1.45rem;
+}
+
+.benefit p {
+    font-size: 0.9rem;
+}
+
+
+/* ======================================
+   PROCESS SECTION
+====================================== */
+
+.process {
+    color: var(--black);
+    background-color: var(--cream);
+}
+
+.process h2,
+.process h3 {
+    color: var(--black);
+}
+
+.process p {
+    color: #4d4d4d;
+}
+
+.process-grid {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.process-step {
+    position: relative;
+    padding: 42px 30px;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.process-step span {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    background-color: var(--gold);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.process-step h3 {
+    margin-bottom: 15px;
+}
+
+
+/* ======================================
+   FEATURED DRINKS SECTION
+====================================== */
+
+.featured {
+    background-color: var(--dark);
+}
+
+.featured-content {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.featured-text h2 {
+    margin-bottom: 24px;
+}
+
+.featured-text > p:not(.section-label) {
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.featured-image-container {
+    position: relative;
+}
+
+.featured-image-container::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+}
+
+.featured-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+
+/* ======================================
+   TESTIMONIALS
+====================================== */
+
+.testimonials {
+    background-color: var(--black);
+}
+
+.testimonial-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonial-card {
+    padding: 34px;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.stars {
+    margin-bottom: 20px;
+    color: var(--gold);
+    letter-spacing: 4px;
+}
+
+.testimonial-card p {
+    margin-bottom: 24px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.4rem;
+    line-height: 1.45;
+}
+
+.testimonial-card h3 {
+    color: var(--gold);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.testimonial-note {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-style: italic;
+}
+
+
+/* ======================================
+   FAQ SECTION
+====================================== */
+
+.faq {
+    color: var(--black);
+    background-color: var(--cream);
+}
+
+.faq h2 {
+    color: var(--black);
+}
+
+.faq-list {
+    width: min(850px, 100%);
+    margin: 0 auto;
+}
+
+.faq details {
+    margin-bottom: 15px;
+    padding: 0 25px;
+    background-color: var(--white);
+    border: 1px solid #e1d5b9;
+    border-radius: 12px;
+}
+
+.faq summary {
+    padding: 22px 0;
+    color: var(--black);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.faq details p {
+    padding: 0 0 22px;
+    color: #555555;
+}
+
+
+/* ======================================
+   FINAL CALL TO ACTION
+====================================== */
+
+.final-cta {
+    padding: 110px 7%;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(117, 47, 0, 0.9),
+            rgba(25, 8, 0, 0.94)
+        ),
+        url("images/phoenix2.jpg") center / cover no-repeat;
+}
+
+.final-cta-content {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+.final-cta h2 {
+    margin-bottom: 22px;
+    font-size: clamp(2.7rem, 6vw, 4.8rem);
+}
+
+.final-cta p:not(.section-label) {
+    margin-bottom: 32px;
+    color: var(--white);
+    font-size: 1.05rem;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+.site-footer {
+    padding: 70px 7% 25px;
+    background-color: #050505;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.4fr;
+    gap: 60px;
+}
+
+.footer-brand h2 {
+    margin-bottom: 14px;
+    color: var(--gold);
+    font-size: 2.2rem;
+}
+
+.footer-brand p {
+    max-width: 390px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 8px;
+    color: var(--white);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding-top: 24px;
+    text-align: center;
+    border-top: 1px solid #222222;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+
+/* ======================================
+   ABOUT PAGE
+====================================== */
+
+.about-page {
+    min-height: calc(100vh - 85px);
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+.about-page-content {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-page-text {
+    max-width: 580px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: var(--gold);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-page-text h2 {
+    margin-bottom: 22px;
+    color: var(--white);
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+}
+
+.about-page-text p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.about-features {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.about-features span {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--card);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+}
+
+.about-page-image img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ======================================
+   MENU / DRINK CARDS
+====================================== */
+
+.drink-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+/* ======================================
+   TABLET RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 1000px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-us-content,
+    .featured-content,
+    .about-page-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .featured-image {
+        height: 480px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+
+/* ======================================
+   MOBILE RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 768px) {
+    .section {
+        padding: 75px 22px;
+    }
+
+    .site-header {
+        position: relative;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .nav-button {
+        padding: 10px 17px;
+    }
+
+    .hero {
+        min-height: 78vh;
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.72);
+    }
+
+    .hero-content {
+        padding: 90px 22px;
+    }
+
+    .hero-content > * {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 13vw, 4.7rem);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .service-grid,
+    .process-grid,
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .service-number {
+        margin-bottom: 25px;
+    }
+
+    .featured-image-container::before {
+        display: none;
+    }
+
+    .featured-image {
+        height: 410px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-page {
+        padding: 70px 22px;
+    }
+
+    .about-page-content {
+        text-align: center;
+    }
+
+    .about-page-text {
+        max-width: 100%;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .drink-card img {
+        height: 300px;
+    }
+}
+
+
+/* ======================================
+   SMALL PHONE RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .featured-image {
+        height: 330px;
+    }
+
+    .final-cta {
+        padding: 85px 22px;
+    }
+}
